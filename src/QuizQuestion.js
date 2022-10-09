@@ -14,8 +14,8 @@ class QuizQuestion extends Component {
 
 
     handleClick(buttonText) {
-        this.setState({ incorrectAnswer: buttonText !== this.props.quiz_question.answer })
-        if (buttonText === this.props.quiz_question.answer) {
+        this.setState({ incorrectAnswer: buttonText.toLowerCase() !== this.props.quiz_question.answer.toLowerCase() })
+        if (buttonText.toLowerCase() === this.props.quiz_question.answer.toLowerCase()) {
             this.props.onCorrectAnswer()
         } else {
             this.props.onIncorrectAnswer();
@@ -24,8 +24,8 @@ class QuizQuestion extends Component {
 
     handleKeyDown(e) {
         if (e.key === 'Enter') {
-            this.setState({ incorrectAnswer: e.target.value !== this.props.quiz_question.answer })
-            if (e.target.value === this.props.quiz_question.answer) {
+            this.setState({ incorrectAnswer: e.target.value.toLowerCase() !== this.props.quiz_question.answer.toLowerCase() })
+            if (e.target.value.toLowerCase() === this.props.quiz_question.answer.toLowerCase()) {
                 this.props.onCorrectAnswer();
                 e.target.value = "";
             } else {
