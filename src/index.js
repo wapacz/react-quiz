@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'

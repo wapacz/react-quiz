@@ -1,4 +1,8 @@
-import React, {Component} from 'react'
+/*
+ *   Copyright (c) 2021 
+ *   All rights reserved.
+ */
+import React, { Component } from 'react'
 
 class QuizQuestionButton extends Component {
 
